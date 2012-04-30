@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" >
+<EditText android:id="@+id/iscWindow1DateBox0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TextBox" android:layout_y="22px" android:layout_x="203px">
+</EditText>
+<TextView android:id="@+id/iscWindow1Label0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Date" android:layout_y="28px" android:layout_x="156px">
+</TextView>
+<Button android:id="@+id/iscWindow1Finish0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Finish" android:layout_y="347px" android:layout_x="34px">
+</Button>
+<Button android:id="@+id/iscWindow1Save0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Save" android:layout_y="349px" android:layout_x="129px">
+</Button>
+<Button android:id="@+id/iscWindow1Button20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cancel" android:layout_y="348px" android:layout_x="221px">
+</Button>
+<EditText android:id="@+id/iscWindow1MainEntry0" android:layout_width="270px" android:layout_height="180px" android:text="" android:layout_y="59px" android:layout_x="36px">
+</EditText>
+<EditText android:id="@+id/iscWindow1ATextField10" android:layout_width="261px" android:layout_height="45px" android:text="" android:layout_y="282px" android:layout_x="38px">
+</EditText>
+<EditText android:id="@+id/iscWindow1QTextBox0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="What did I have for lunch today?" android:layout_y="250px" android:layout_x="40px">
+</EditText>
+<TextView android:id="@+id/iscWindow1Title0" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Label" android:layout_y="29px" android:layout_x="91px">
+</TextView>
+</AbsoluteLayout>

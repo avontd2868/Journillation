@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<title>Journillation</title>
+
+<script src="javascript/prototype.js" type="text/javascript"></script>
+<script src="javascript/scriptaculous.js" type="text/javascript"></script>
+
+<style type="text/css">
+body {
+background: url('img/pagebg.jpg') repeat-x;
+background-color: #FFFFFF;
+font-family: arial, verdana, sans-serif;
+font-size: 12px;
+}
+a {
+color: #cde2ff;
+font-weight: bold;
+font-size: 11px;
+}
+.window {
+background: #E0E0E0;
+position: absolute;
+padding: 1px;
+border: 1px solid #424242;
+}
+.window p {
+margin: 3px;
+}
+.windowinner {
+padding: 7px;
+}
+.windowinner input {
+margin-top: 20px;
+}
+.window h1
+{
+padding: 6px;
+display: block;
+background-color: #A6A6A6;
+font-size: 13px;
+margin: 0px;
+color: #424242;
+}
+</style>
+
+<script type="text/javascript">
+
+var iscVTrue = 1;
+var iscVQuitAfter = 0;
+var iscVmdH2end = " ##\n";
+var iscVmdH2 = "\n\n## ";
+var iscVFinalState = "";
+var iscVmdH1end = " #\n\n";
+var iscVmdH1begin = "# ";
+var iscVDate = "";
+var iscVJournalA1 = "";
+var iscVJournalQ1 = "What did I have for breakfast today?";
+var iscVJournalEntry = "";
+//EndOfGlobalVariables
+
+function init()
+{
+
+iscWindow1();
+//iscApp1Launched
+}
+
+Event.observe(window, 'load', init, false);
+
+function iscWindow1DateBoxChanged()
+{
+iscGetTextBox9();
+//iscWindow1DateBoxChanged
+}
+
+
+function iscWindow1FinishClicked()
+{
+iscSetNumber8();
+//iscWindow1FinishClicked
+}
+
+
+function iscWindow1SaveClicked()
+{
+iscGetTextField7();
+//iscWindow1SaveClicked
+}
+
+
+function iscWindow1Button2Clicked()
+{
+iscAppQuit19();
+//iscWindow1Button2Clicked
+}
+
+
+function iscWindow1QTextBoxChanged()
+{
+iscGetTextBox10();
+//iscWindow1QTextBoxChanged
+}
+
+
+function iscWindow1()
+{
+new Draggable('iscWindow1Window1');
+document.getElementById("iscWindow1Window1").style.visibility = "visible";
+//iscWindow1Done
+//iscWindow1Opened
+}
+
+function iscWindow1Closed()
+{
+iscAppQuit19();
+//iscWindow1Closed
+}
+
+
+function iscGetTextField6()
+{
+iscVJournalA1 = document.getElementById("iscWindow1ATextField10").value;
+iscCombineText18();
+//iscGetTextField6Done
+}
+
+
+function iscGetTextField7()
+{
+iscVJournalEntry = document.getElementById("iscWindow1MainEntry0").value;
+iscGetTextField6();
+//iscGetTextField7Done
+}
+
+
+function iscSetNumber8()
+{
+iscVQuitAfter = iscVTrue;
+iscGetTextField7();
+//iscSetNumber8Done
+}
+
+
+function iscGetTextBox9()
+{
+iscVDate = document.getElementById("iscWindow1DateBox0").value;
+//iscGetTextBox9Done
+}
+
+
+function iscGetTextBox10()
+{
+iscVJournalQ1 = document.getElementById("iscWindow1QTextBox0").value;
+//iscGetTextBox10Done
+}
+
+
+function iscIfThen11()
+{
+if (iscVQuitAfter == iscVTrue)
+{
+iscAppQuit19();
+//iscIfThen11True
+
+}
+else
+{
+//iscIfThen11False
+}
+}
+
+
+function iscCombineText12()
+{
+iscVFinalState = iscVFinalState + iscVJournalA1;
+iscSaveTextFileDialog5()
+//iscCombineText12Done
+}
+
+
+function iscCombineText13()
+{
+iscVFinalState = iscVFinalState + iscVmdH2end;
+iscCombineText12();
+//iscCombineText13Done
+}
+
+
+function iscCombineText14()
+{
+iscVFinalState = iscVFinalState + iscVJournalQ1;
+iscCombineText13();
+//iscCombineText14Done
+}
+
+
+function iscCombineText15()
+{
+iscVFinalState = iscVFinalState + iscVmdH2;
+iscCombineText14();
+//iscCombineText15Done
+}
+
+
+function iscCombineText16()
+{
+iscVFinalState = iscVFinalState + iscVJournalEntry;
+iscCombineText15();
+//iscCombineText16Done
+}
+
+
+function iscCombineText17()
+{
+iscVFinalState = iscVFinalState + iscVmdH1end;
+iscCombineText16();
+//iscCombineText17Done
+}
+
+
+function iscCombineText18()
+{
+iscVFinalState = iscVmdH1begin + iscVDate;
+iscCombineText17();
+//iscCombineText18Done
+}
+
+
+function iscAppQuit19()
+{
+//iscAppQuit19Done
+}
+
+
+//EndOfFunctions
+
+</script>
+</head>
+<body>
+<div id="iscWindow1Window1" class="window" style="visibility:hidden;height:444px;width:337px;x:20px;y:20px;">
+<h1>Window</h1>
+<div class="windowinner">
+<div style="position: absolute; left: 203px; top: 22px;">
+<input type="text" id="iscWindow1DateBox0" style='width:80px;' value="TextBox" onChange="iscWindow1DateBoxChanged()">
+</div>
+<div style="position: absolute; left: 156px; top: 56px;">
+<label id="iscWindow1Label0">Date</label>
+</div>
+<div style="position: absolute; left: 34px; top: 347px;">
+<input type="button" id="iscWindow1Finish0" onClick="iscWindow1FinishClicked()" value="Finish" />
+</div>
+<div style="position: absolute; left: 129px; top: 349px;">
+<input type="button" id="iscWindow1Save0" onClick="iscWindow1SaveClicked()" value="Save" />
+</div>
+<div style="position: absolute; left: 221px; top: 348px;">
+<input type="button" id="iscWindow1Button20" onClick="iscWindow1Button2Clicked()" value="Cancel" />
+</div>
+<div style="position: absolute; left: 36px; top: 87px;">
+<textarea id="iscWindow1MainEntry0" style='width:270;height:180";'></textarea>
+</div>
+<div style="position: absolute; left: 38px; top: 310px;">
+<textarea id="iscWindow1ATextField10" style='width:261;height:45";'></textarea>
+</div>
+<div style="position: absolute; left: 40px; top: 250px;">
+<input type="text" id="iscWindow1QTextBox0" style='width:264px;' value="What did I have for lunch today?" onChange="iscWindow1QTextBoxChanged()">
+</div>
+<div style="position: absolute; left: 91px; top: 57px;">
+<label id="iscWindow1Title0">Label</label>
+</div>
+</div>
+</div>
+
+<!-- EndOfHTML -->
+
+</body>
+</html>

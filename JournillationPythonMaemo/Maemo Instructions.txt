@@ -1,0 +1,13 @@
+Running your application on a Maemo-powered Internet Tablet (Nokia N800, N810, N900, etc.):
+
+1) Copy the .py file in this folder to your Maemo powered tablet.
+2) Launch the X Terminal application (usually located in your Utilities section).
+3) Change to the directory where you placed your application (for example, if you have an N800/N810 and you copied your application via USB, you would type 'cd /media/mmc2' to change to your internal memory card
+4) From there type 'python yourapplication.py'.  This will run your application.
+
+
+Distributing your application to other Maemo-powered Tablets:
+
+You will want to create a .deb package so that your application can be properly installed on other tablets.
+There is a great set of instructions on how to do this here:
+http://wiki.maemo.org/PyMaemo/UsingPythonInMaemo#Distributing_Python_applications
